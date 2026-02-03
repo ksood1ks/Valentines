@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Valentine 💖</title>
+
+  <style>
+    body {
+      background: #ffe6f0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 120px;
+    }
+    h1 {
+      font-size: 36px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      margin: 20px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+    #yes {
+      background: #ff4d6d;
+      color: white;
+    }
+    #no {
+      background: #ccc;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Shivani, will you be my Valentine? ❤️</h1>
+
+  <button id="yes">YES</button>
+  <button id="no">NO</button>
+
+  <script>
+    const noBtn = document.getElementById("no");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 100);
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    });
+
+    document.getElementById("yes").onclick = () => {
+      document.body.innerHTML = `
+        <h1>💖 YAY!!! 💖</h1>
+        <p>Best decision ever 😘</p>
+        <img src="https://media.giphy.com/media/3ohs7KViF6rA4aan5u/giphy.gif" />
+        <p>I love you ❤️</p>
+      `;
+    };
+  </script>
+</body>
+</html>
