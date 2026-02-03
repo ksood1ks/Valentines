@@ -51,13 +51,40 @@
     });
 
     document.getElementById("yes").onclick = () => {
-      document.body.innerHTML = `
-        <h1>💖 YAY!!! 💖</h1>
-        <p>Best decision ever 😘</p>
-        <img src="https://media1.tenor.com/m/6oVpxIFwAAoAAAAC/cat-kiss.gif" />
-        <img src="kaaku.jpg" alt="Kaaku" />
-      `;
-    };
+  document.body.innerHTML = `
+    <h1>💖 YAY!!! 💖</h1>
+    <p>Best decision ever 😘</p>
+
+    <div style="
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      margin-top:20px;
+      flex-wrap:wrap;
+    ">
+      <img 
+        src="https://media1.tenor.com/m/6oVpxIFwAAoAAAAC/cat-kiss.gif"
+        style="
+          width:220px;
+          max-width:90%;
+          border-radius:12px;
+        "
+      />
+
+      <img 
+        src="kaaku.jpeg"
+        alt="Kaaku"
+        style="
+          width:220px;
+          max-width:90%;
+          height:auto;
+          border-radius:12px;
+          object-fit:cover;
+        "
+      />
+    </div>
+  `;
+};
   </script>
 </body>
 </html>
